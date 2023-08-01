@@ -38,6 +38,10 @@ app.post("/merge", upload.array("files", 5), async (req, res) => {
     }
     for (let i = 0; i < req.files.length; i++) {
       const workbook = xlsx.readFile(req.files[i].path);
+      console.log(
+        "🚀 ~ file: index.js:41 ~ app.post ~ workbook:",
+        workbook.Sheets[workbook.SheetNames[0]]
+      );
       xlsx.utils.book_append_sheet(
         mergedWorkbook,
         workbook.Sheets[workbook.SheetNames[0]],
