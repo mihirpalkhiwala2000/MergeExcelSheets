@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File upload project</title>
+  </head>
+  <body>
+    <form action="/merge" method="post" enctype="multipart/form-data">
+      <input
+        type="file"
+        name="files"
+        accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+        multiple
+        required
+      /><br />
+      <button type="submit">Merge files</button>
+    </form>
+  </body>
+</html>
